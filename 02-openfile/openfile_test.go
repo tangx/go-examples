@@ -8,7 +8,7 @@ import (
 
 const (
 	fileExist    = `/tmp/fileExist.txt`
-	fielNotExist = `/tmp/fielNotExist.txt`
+	fileNotExist = `/tmp/fileNotExist.txt`
 )
 
 func Test_MustIsExist(t *testing.T) {
@@ -18,7 +18,7 @@ func Test_MustIsExist(t *testing.T) {
 	}
 
 	fmt.Println(IsFileExist(fileExist))
-	fmt.Println(IsFileExist(fielNotExist))
+	fmt.Println(IsFileExist(fileNotExist))
 }
 
 func Test_MustOpenByOsOpen(t *testing.T) {

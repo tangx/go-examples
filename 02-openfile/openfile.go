@@ -85,5 +85,4 @@ func osTruncate(filename string) {
 	if err != nil {
 		panic(err)
 	}
-
 }
