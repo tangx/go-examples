@@ -7,9 +7,13 @@ go-examples
 + [x] hello world
 + [x] file operation
 + [x] [time operation](03-timeinfo/timeinfo.go)
++ [ ] golang template: 格式化输出
+  + printf
+  + go-template
+
+
 
 ## Todo List
-+ [ ] golang template
 + [ ] golang format printout
 + [ ] reflect 反射
 + [ ] interface 深入裂解接口
@@ -17,4 +21,5 @@ go-examples
 + [ ] goroutine 携程
 + [ ] channel 通道
 + [ ] 数据库操作: sqlx
-+ [ ] ...
++ [ ] test: 1. 更优雅的 test 用例 , 2. `*testing.B`
++ [ ] golang 命令规范、语法规范
