@@ -3,6 +3,8 @@ package timeinfo
 import (
 	"fmt"
 	"time"
+
+	"github.com/tangx/go-examples/utils"
 )
 
 const (
@@ -10,7 +12,7 @@ const (
 )
 
 func printTime(t time.Time) {
-	fmt.Println("->", t.Format(FORMAT))
+	fmt.Println("//", t.Format(FORMAT))
 }
 
 func time2String(t time.Time) {
@@ -38,14 +40,8 @@ func string2Time() {
 
 	timeStr := `2019-11-23T15:23:31Z`
 	t, err := time.Parse(FORMAT, timeStr)
-	if err != nil {
-		panic(err)
-	}
-	printTime("time.Parse : ", t)
-}
-
-func timeZone() {
-
+	utils.PanicError(err)
+	printTime(t)
 }
 
 func timeDelta(t time.Time) {
@@ -63,9 +59,45 @@ func timeDelta(t time.Time) {
 	before3Hour := time.Now().Add(-3 * time.Hour)
 	fmt.Println(t.After(before3Hour))
 
-	// 本地时间
-	printTime(t.Local()) //2019-11-15T23:23:52Z
-	// UTC 时间
-	printTime(t.UTC()) //2019-11-15T15:23:52Z
+}
 
+func timeZone() {
+	now := time.Now()
+	printTime(now.Local()) // 2019-11-16T11:22:59Z
+	printTime(now.UTC())   // 2019-11-16T03:22:59Z
+
+	// show local location
+	curLoc := now.Local().Location()
+	fmt.Println(curLoc)
+	fmt.Println(now.Location())
+	fmt.Println(now.Local().UTC())
+	// locTZ := time.LoadLocationFromTZData()
+
+	// locUser := time.LoadLocation("Asia/Shanghai")
+	zone, offset := now.Zone()
+	fmt.Println("zone:", zone, "\noffset:", offset)
+
+	zone, offset = now.Local().Zone()
+	fmt.Println("zone:", zone, "\noffset:", offset)
+
+	zone, offset = now.UTC().Zone()
+	fmt.Println("zone:", zone, "\noffset:", offset)
+
+	// // 用户自定义 timezone
+	loc, err := time.LoadLocation("America/Los_Angeles")
+	utils.PanicError(err)
+	fmt.Println("America/Los_Angeles", now.In(loc).Format(FORMAT))
+	// more user define timezone
+	for _, locStr := range []string{"America/Los_Angeles",
+		"Asia/Shanghai",
+		"CST",
+		"Pacific/Marquesas",
+		"America/Boise",
+		"Antarctica/Rothera",
+		"Asia/Oral"} {
+		loc, err := time.LoadLocation("America/Los_Angeles")
+		utils.PanicError(err)
+		fmt.Println(locStr, now.In(loc).Format(FORMAT))
+
+	}
 }

@@ -18,3 +18,7 @@ func Test_string2Time(t *testing.T) {
 func Test_TimeDelta(t *testing.T) {
 	timeDelta(time.Now())
 }
+
+func Test_timeZone(t *testing.T) {
+	timeZone()
+}
