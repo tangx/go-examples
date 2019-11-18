@@ -11,16 +11,16 @@ go-examples
 + [x] golang template: 格式化输出
   + printf
   + go-template
-
++ [x] golang format printout
++ [ ] channel 通道
 
 
 ## Todo List
-+ [ ] golang format printout
+
 + [ ] reflect 反射
-+ [ ] interface 深入裂解接口
++ [ ] interface 深入理解接口
 + [ ] http 请求
-+ [ ] goroutine 携程
-+ [ ] channel 通道
++ [ ] goroutine 协程
 + [ ] 数据库操作: sqlx
 + [ ] test: 1. 更优雅的 test 用例 , 2. `*testing.B`
 + [ ] golang 命令规范、语法规范
