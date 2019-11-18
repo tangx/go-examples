@@ -7,7 +7,8 @@ go-examples
 + [x] hello world
 + [x] file operation
 + [x] [time operation](03-timeinfo/timeinfo.go)
-+ [ ] golang template: 格式化输出
++ [x] alfred-keepassxc: https://github.com/tangx/alfred-keepassxc
++ [x] golang template: 格式化输出
   + printf
   + go-template
 
