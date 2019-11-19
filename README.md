@@ -12,7 +12,7 @@ go-examples
   + printf
   + go-template
 + [x] golang format printout
-+ [ ] channel 通道
++ [x] channel 通道
 
 
 ## Todo List

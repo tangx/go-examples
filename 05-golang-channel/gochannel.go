@@ -32,7 +32,7 @@ func Sender(ch chan int) {
 		time.Sleep(time.Duration(n) * time.Second)
 
 		ch <- i
-		fmt.Printf("-> Send %d, Cooldown %d s\n", i, n)
+		fmt.Printf("// -> Send %d, Cooldown %d s\n", i, n)
 
 	}
 	// 关闭 ch
@@ -49,7 +49,7 @@ func Reciver(ch chan int) {
 
 		rand.Seed(time.Now().UnixNano())
 		n := rand.Intn(4)
-		fmt.Printf("<- Recived %d , CoolDonw %d s\n", i, n)
+		fmt.Printf("// <- Recived %d , CoolDonw %d s\n", i, n)
 
 		time.Sleep(time.Duration(n) * time.Second)
 	}
