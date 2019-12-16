@@ -38,7 +38,8 @@ func Test_ifTemplate(t *testing.T) {
 
 	// range . 中的 `.` 的作用域是  p
 	// {{ . }} 中的 `.` 的作用域是 []string 的值
-	tepl := `{{ range . }} {{ . }} {{ end }}`
+	tepl := `{{ range . }} {{ . }}
+	{{ end }}`
 	tmpl, _ := template.New("test").Parse(tepl)
 	_ = tmpl.Execute(os.Stdout, p)
 

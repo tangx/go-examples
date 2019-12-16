@@ -13,14 +13,14 @@ go-examples
   + go-template
 + [x] golang format printout
 + [x] channel 通道
-
++ [ ] http 请求
 
 ## Todo List
-
++ [ ] reflect 反射
 + [ ] reflect 反射
 + [ ] interface 深入理解接口
-+ [ ] http 请求
 + [ ] goroutine 协程
++ [ ] http 请求
 + [ ] 数据库操作: sqlx
 + [ ] test: 1. 更优雅的 test 用例 , 2. `*testing.B`
 + [ ] golang 命令规范、语法规范
