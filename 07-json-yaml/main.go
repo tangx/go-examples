@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
+	"os"
 
 	"gopkg.in/yaml.v2"
 )
@@ -65,7 +66,10 @@ func Json2Yaml() {
 
 	fmt.Println(string(body))
 	var person Person
-	json.Unmarshal(body, &person)
+	err = json.Unmarshal(body, &person)
+	if err != nil {
+		panic(err)
+	}
 	fmt.Println(person.Age)
 
 	b, _ := yaml.Marshal(person)
@@ -93,4 +97,58 @@ func Yaml2Yaml() {
 
 	b, _ := yaml.Marshal(person)
 	fmt.Printf("%s", b)
+}
+
+func JsonMinify(filename string) {
+	body, err := ioutil.ReadFile(filename)
+	if err != nil {
+		panic(err)
+	}
+
+	var p interface{}
+	err = json.Unmarshal(body, &p)
+	if err != nil {
+		panic(err)
+	}
+
+	result, _ := json.Marshal(p)
+	fmt.Printf("%s", result)
+
+	fobj, err := os.OpenFile(filename, os.O_CREATE|os.O_TRUNC|os.O_RDWR, 0755)
+	if err != nil {
+		fmt.Println(err)
+	}
+	defer fobj.Close()
+
+	_, err = fobj.Write(result)
+	if err != nil {
+		panic(err)
+	}
+}
+
+func JsonPretty(filename string) {
+	body, err := ioutil.ReadFile(filename)
+	if err != nil {
+		panic(err)
+	}
+
+	var p interface{}
+	err = json.Unmarshal(body, &p)
+	if err != nil {
+		panic(err)
+	}
+
+	result, _ := json.MarshalIndent(p, "", "  ")
+	fmt.Printf("%s", result)
+
+	fobj, err := os.OpenFile(filename, os.O_CREATE|os.O_TRUNC|os.O_RDWR, 0755)
+	if err != nil {
+		fmt.Println(err)
+	}
+	defer fobj.Close()
+
+	_, err = fobj.Write(result)
+	if err != nil {
+		panic(err)
+	}
 }

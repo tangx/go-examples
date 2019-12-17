@@ -15,5 +15,12 @@ func Test_Json2Yaml(t *testing.T) {
 }
 func Test_Yaml2Yaml(t *testing.T) {
 	Yaml2Yaml()
+}
 
+func Test_JsonMinify(t *testing.T) {
+	JsonMinify("config.json")
+}
+
+func Test_JsonPretty(t *testing.T) {
+	JsonPretty("config.json")
 }

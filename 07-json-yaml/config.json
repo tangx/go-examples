@@ -1,5 +1,5 @@
 {
-    "Name":"王五",
-    "Age":10,
-    "Gender":"Male"
+  "Age": 10,
+  "Gender": "Male",
+  "Name": "王五"
 }
