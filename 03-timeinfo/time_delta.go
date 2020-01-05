@@ -5,6 +5,7 @@ import (
 	"time"
 )
 
+// timeDelta2 比较两个时间的时间差
 func timeDelta2() {
 
 	t1 := time.Now()
