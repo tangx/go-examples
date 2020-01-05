@@ -1,6 +1,8 @@
 package openfile
 
 // 按行读取文件
+// 关于使用 bufio 包中 ReadString 和 Scanner 的优劣
+// https://stackoverflow.com/questions/47479564/go-bufio-readstring-in-loop-is-infinite
 
 import (
 	"bufio"
