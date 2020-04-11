@@ -1,3 +1,9 @@
+github.com/google/go-querystring v1.0.0 h1:Xkwi/a1rcvNg1PPYe5vI8GbeBY/jrVuDX5ASuANWTrk=
+github.com/google/go-querystring v1.0.0/go.mod h1:odCYkC5MyYFN7vkCjXpyrEuKhc/BUO6wN/zVPAxq5ck=
+github.com/hetiansu5/urlquery v1.2.1 h1:cC29FoIFhLP0Tx5ajAcizWd233NcmSjSzuZYM3lSQJo=
+github.com/hetiansu5/urlquery v1.2.1/go.mod h1:TpDbtDUgk09rFy/tXu4R+qrTvibZWSQjZTT8VDh/Xl0=
+github.com/tangx/go-querystring v1.0.1 h1:t6yJPu7eAgpcCC40Tm0xmz+Zsh5gVPbxfIudQfqO1BA=
+github.com/tangx/go-querystring v1.0.1/go.mod h1:/E/dULAT8XL8IcD+oh5TBkA25sA52MBCAlfgvDvRrcs=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
 gopkg.in/yaml.v2 v2.2.5 h1:ymVxjfMaHvXD8RqPRmzHHsB3VvucivSkIAvJFDI5O3c=
 gopkg.in/yaml.v2 v2.2.5/go.mod h1:hI93XBmqTisBFMUTm0b8Fm+jr3Dg1NNxqwp+5A1VGuI=
