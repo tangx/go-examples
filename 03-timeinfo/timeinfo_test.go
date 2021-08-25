@@ -1,12 +1,14 @@
 package timeinfo
 
 import (
+	"fmt"
 	"testing"
 	"time"
 )
 
 func Test_timeFormat(t *testing.T) {
 	now := time.Now()
+	fmt.Println(now.String())
 	time2String(now)
 
 }

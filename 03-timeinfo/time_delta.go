@@ -19,4 +19,9 @@ func timeDelta2() {
 	d2 := t2.Sub(t1)
 	fmt.Println(d2.Seconds())
 
+	t3 := t2.Add(-24 * time.Hour)
+	fmt.Println(t3)
+
+	t4 := t2.AddDate(-1, -1, -1)
+	fmt.Println(t4)
 }

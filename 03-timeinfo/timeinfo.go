@@ -35,13 +35,19 @@ func time2String(t time.Time) {
 
 func string2Time() {
 
+	now := time.Now()
+	printTime(now)
+	fmt.Println(now)
+
 	t1 := time.Date(2019, time.November, 17, 11, 0, 0, 0, time.UTC)
 	printTime(t1)
+	fmt.Println(t1)
 
 	timeStr := `2019-11-23T15:23:31Z`
 	t, err := time.Parse(FORMAT, timeStr)
 	utils.PanicError(err)
 	printTime(t)
+	fmt.Println(t)
 }
 
 func timeDelta(t time.Time) {
